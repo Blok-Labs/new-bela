@@ -2953,7 +2953,7 @@ bool InitBlockIndex() {
         //   vMerkleTree: 97ddfbbae6
 
         // Genesis block
-        const char* pszTimestamp = "January 8th, 1889: Hollerith Tabulating Machine Patent";
+        const char* pszTimestamp = "November 23, 2017: Thanksgiving with Alcoholic Aunts";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2965,9 +2965,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1389255880;
+        block.nTime    = 1511484929;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 1038939;
+        block.nNonce   = 1038940;
 
         if (fTestNet)
         {
