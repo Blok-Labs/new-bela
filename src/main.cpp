@@ -1065,6 +1065,8 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     int64 nSubsidy = 50 * COIN;
+    int64 bSubsidy = nSubsidy * .24; //Bela subsidy is 24% of the reward
+    nSubsidy -= bSubsidy;  // Subtract Bela's portion from reward
 
     // Subsidy is cut in half every 840000 blocks, which will occur approximately every 4 years
     nSubsidy >>= (nHeight / 730000); // BelaCoin: 730k blocks in ~2 years
